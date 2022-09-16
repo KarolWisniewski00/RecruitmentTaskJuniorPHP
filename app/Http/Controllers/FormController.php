@@ -62,6 +62,22 @@ class FormController extends Controller
             'nip' => 'required',
             'password' => 'required|max:255|min:8',
             'password_verification' => 'required|max:255|min:8|required_with:password|same:password',
+        ],[
+            'name.required' => 'To pole jest wymagane!',
+            'name.unique' => 'Nazwa ma być unikalna!',
+            'name.max' => 'Maksymalna ilość znaków to 255!',
+            'email.required' => 'To pole jest wymagane!',
+            'email.unique' => 'Ten email jest już zajęty!',
+            'email.email' => 'Podaj prawidłowy format!',
+            'nip.required' => 'To pole jest wymagane!',
+            'password.required' => 'To pole jest wymagane!',
+            'password.max' => 'Maksymalna ilość znaków to 255!',
+            'password.min' => 'Minimalna ilość znaków to 8!',
+            'password_verification.required' => 'To pole jest wymagane!',
+            'password_verification.max' => 'Maksymalna ilość znaków to 255!',
+            'password_verification.min' => 'Minimalna ilość znaków to 8!',
+            'password_verification.same' => 'Hasła muszą pasować do siebie!',
+            'password_verification.required_with' => 'Hasła muszą pasować do siebie!',
         ]);
 
         /*CUSTOM VALIDATION*/
